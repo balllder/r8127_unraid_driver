@@ -1,9 +1,9 @@
 <?xml version='1.0' standalone='yes'?>
 <!DOCTYPE PLUGIN [
   <!ENTITY name      "r8127-driver">
-  <!ENTITY author    "jinlife">
-  <!ENTITY version   "2024.04.04">
-  <!ENTITY gitURL    "https://raw.githubusercontent.com/&author;/unraid-r8125-r8152-driver/main">
+  <!ENTITY author    "balllder">
+  <!ENTITY version   "2025.11.03">
+  <!ENTITY gitURL    "https://raw.githubusercontent.com/&author;/r8127_unraid_driver/main">
   <!ENTITY pluginURL "&gitURL;/unraid-r8127.plg">
   <!ENTITY plugin    "/boot/config/plugins/&name;">
   <!ENTITY emhttp    "/usr/local/emhttp/plugins/&name;">
