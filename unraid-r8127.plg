@@ -52,7 +52,7 @@
 
 This package contains the Realtek OOT Drivers and installs them, a reboot is required after installing the plugin (upgrading to a newer Unraid version maybe needs a second reboot too).
 
-Source: https://github.com/jinlife/unraid-r8125-r8152-driver
+Source: https://github.com/balllder/r8127_unraid_driver
 </INLINE>
 </FILE>
 
@@ -87,7 +87,7 @@ fi
 
 check() {
 if ! ls -1 &packages;/${KERNEL_V%%-*}/ | grep -q "${PACKAGE}" ; then
-  LAT_PACKAGE="$(wget -qO- https://api.github.com/repos/jinlife/unraid-r8125-r8152-driver/releases/tags/${KERNEL_V} | jq -r '.assets[].name' | grep "${PACKAGE}" | grep -E -v '\.md5$' | sort -V | tail -1)"
+  LAT_PACKAGE="$(wget -qO- https://api.github.com/repos/balllder/r8127_unraid_driver/releases/tags/${KERNEL_V} | jq -r '.assets[].name' | grep "${PACKAGE}" | grep -E -v '\.md5$' | sort -V | tail -1)"
   echo
   echo "-----------------------Downloading RTL8127 package!-------------------------"
   echo "--------This could take some time, please don't close this window!----------"
@@ -111,7 +111,7 @@ fi
 # Define Variables
 KERNEL_V="$(uname -r)"
 PACKAGE="r8127"
-DL_URL="https://github.com/jinlife/unraid-r8125-r8152-driver/releases/download/$KERNEL_V"
+DL_URL="https://github.com/balllder/r8127_unraid_driver/releases/download/$KERNEL_V"
 
 if [ ! -d "&packages;/${KERNEL_V%%-*}" ]; then
   mkdir -p "&packages;/${KERNEL_V%%-*}"
